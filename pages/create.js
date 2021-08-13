@@ -1,7 +1,10 @@
-import styles from'./create.module.scss';
+
+import styles from '@styles/create.module.scss';
 
 const CreatePage = () => (
-  <div styles={className.CreatePage}>
+
+  //Error solved: styles and className position is changed.
+  <div className={styles.CreatePage}>
     <h1>Hello, from CreatePage!</h1>
   </div>
 );
