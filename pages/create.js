@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router'; 
 import { createPost } from '@lib/firebase'; 
+import { Layout } from '@components';
 import styles from '@styles/create.module.scss';
 
 const CreatePage = () =>{
@@ -72,7 +73,7 @@ const CreatePage = () =>{
   };
 
   return(
-
+    <Layout>
     //Error solved: styles and className position is changed.
     <div className={styles.CreatePage}>
       <form onSubmit={handleSubmit}>
@@ -125,6 +126,7 @@ const CreatePage = () =>{
           {isLoading ? 'Creating...' : 'Create'}</button>
       </form>
     </div>
+    </Layout>
   );
 };
 
