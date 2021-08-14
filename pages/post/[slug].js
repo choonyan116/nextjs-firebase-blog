@@ -6,6 +6,18 @@ import styles from '@styles/post.module.scss';
 
 /* PostPage accept post prop and render the post */
 const PostPage = ({ post }) => {
+  //Ready to route user to other pages.
+  const router = useRouter();
+ 
+  /*Direct user to 404 page if post does not exists*/
+  if (!post && typeof window !== 'undefined') {
+    router.push('/404');
+    return;
+  }
+
+  if(!post){
+    return null;
+  }
 
 return (
     <Layout>
