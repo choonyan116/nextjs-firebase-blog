@@ -9,11 +9,19 @@ const Layout = ({ children }) => {
     <div className={styles.Layout}>
       <nav>
         <span>
-          <a href="/">My Next.js Blog</a>
+          <a href="/">CupidGo</a>
         </span>
+        <span>
+            <a href="/create">Create</a>
+          </span>
         {user && (
           <span>
             <button onClick={() => signOut()}>Sign Out</button>
+          </span>
+        )}
+        {!user &&(
+          <span>
+            <a href="/signin">Login</a>
           </span>
         )}
       </nav>

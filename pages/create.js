@@ -14,8 +14,11 @@ const CreatePage = () =>{
     coverImageAlt: '',
     content: '',
   });
+  
   const [isLoading, setIsLoading] = useState(false);
   const [user, userLoading] = useAuth();
+
+
   console.log(user, userLoading);
 
   if (userLoading) {
@@ -23,12 +26,9 @@ const CreatePage = () =>{
   }
   
   if (!user && typeof window !== 'undefined') {
-    router.push('/404');
+    router.push('/signin');
     return null;
   }
-  
-
-
 
    /* This is the function we're passing to each control so we can capture
   the value in it and store it in our `formValues` variable.
@@ -87,8 +87,8 @@ const CreatePage = () =>{
   };
 
   return(
-    <Layout>
     //Error solved: styles and className position is changed.
+    <Layout>
     <div className={styles.CreatePage}>
       <form onSubmit={handleSubmit}>
         <h1>Create a new post</h1>

@@ -4,13 +4,13 @@
 import { getPosts } from '@lib/firebase';
 import { getFormattedDate } from '@lib/utils';
 import { Layout } from '@components';
-import styles from '@styles/index.module.scss';
 
+import styles from '@styles/index.module.scss';
 
 const HomePage = ({ posts }) => (
   <Layout>
     <div className={styles.HomePage}>
-      <h1>Blog Posts</h1>
+      <h1>User posts</h1>
       {posts.map((post) => (
         <article key={post.slug}>
           <img src={post.coverImage} alt={post.coverImageAlt} />
