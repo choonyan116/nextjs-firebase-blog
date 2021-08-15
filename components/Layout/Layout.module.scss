@@ -1,10 +1,12 @@
 .Layout {
+  background: #FFB6C1;
+    background-color: #FFB6C1;
     nav {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px;
-      background-color: #1a73e8;
+      background-color: 	#FF69B4;
   
       span {
         a {
@@ -18,7 +20,7 @@
           }
         }
         button {
-          color: #1a73e8;
+          color: #FF69B4;
           background-color: white;
         }
       }
